@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.litton.parkservice">
+
+    <application>
+        <provider
+            android:name=".ParkContentProvider"
+            android:authorities="com.litton.ParkContentProvider"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+</manifest>

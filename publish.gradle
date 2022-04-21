@@ -1,0 +1,19 @@
+apply plugin: 'maven-publish'
+
+Properties properties = new Properties()
+def file = new File(rootProject.projectDir,'local.properties')
+if (null != file && file.exists()) {
+    properties.load(file.newDataInputStream())
+}
+
+publishing {
+    repositories {
+        maven {
+            url 'http://10.1.120.5/nexus/content/repositories/thirdparty/'
+            credentials {
+                username properties.getProperty('maven.username')
+                password properties.getProperty('maven.password')
+            }
+        }
+    }
+}

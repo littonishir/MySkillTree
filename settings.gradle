@@ -1,0 +1,22 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            allowInsecureProtocol = true
+            url 'http://10.1.120.5:8082/nexus/content/repositories/thirdparty/'
+        }
+        maven {
+            allowInsecureProtocol = true
+            url 'http://10.1.120.5:8082/nexus/content/groups/public/'
+        }
+    }
+}
+rootProject.name = "MySkillTree"
+include ':app'
+include ':ParkService'
+include ':ParkClient'
+include ':ParkApp'
+include ':TouchEventDemo'
+include ':myflavor'
